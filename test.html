@@ -2,6 +2,20 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="ns-gallery.css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	 <!-- <script src="changeImg.js" type="text/javascript" ></script> -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".news-gallery").mouseover(function(){
+			$(".news-img-next").animate({right:'20px'});
+			$(".news-img-prev").animate({left:'20px'});
+		})
+		$(".news-gallery").mouseout(function(){
+			$(".news-img-next").stop(true,true).animate({right:'-40px'});
+			$(".news-img-prev").stop(true,true).animate({left:'-40px'});
+		})
+	})
+	</script>
 </head>
 
 <body>
@@ -48,6 +62,5 @@
 		<div class="news-img-next"></div>
 		<div class="news-img-prev"></div>
 	</div>
-	<script type="text/javascript" ></script>
 </body>
 </html>

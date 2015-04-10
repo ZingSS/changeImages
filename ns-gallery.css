@@ -16,6 +16,10 @@ table, caption, tbody, tfoot, thead, tr, th, td,p {
  background: transparent;
 }
 
+ul li{
+	list-style: none;
+}
+
 body{
 	clear:both;
 }
@@ -25,6 +29,9 @@ body{
 	width: 696px;
 	overflow: hidden;
 	float: left;
+
+	position: absolute;
+	left: 100px;          /*if you need left/right/top/buttom to position cell, first position*/
 }
 
 .news-gallery-img{
@@ -40,4 +47,54 @@ body{
 	overflow: hidden;
 
 	float: left;
+}
+
+.news-gallery-tit{
+	position: absolute;
+	top: 90%;
+}
+
+.news-gallery-nav{
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	z-index: 30;
+	display: block;
+}
+
+.news-gallery-nav li{
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+	border-radius: 20px;
+	background: #fff;
+
+	float: left;
+}
+
+.news-gallery-tit li{
+	color: #000;
+	float: left;
+}
+
+.news-img-next{
+	background: url(img/right.png);
+
+	right: -50px;
+}
+
+.news-img-prev{
+	background: url(img/left.png);
+
+	left: -50px;
+}
+
+.news-img-prev, .news-img-next{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 50%;
+
+	cursor: pointer;
+	margin-top: -32px;
 }
